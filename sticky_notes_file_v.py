@@ -6,18 +6,19 @@ window = tk.Tk()
 window.title('notes')
 window.geometry('250x300')
 
-
+# create file if doesnt exist
 file=open('notes.stk','a')
 file.close()
 
-def writefile(event):
+
+def writefile(event):   #write method trigger by keypress
     print('event triggered: file saved')
     file = open('notes.stk', 'w')
     file.write(entry.get(1.0, tk.END))
     file.close()
 
 
-def readfile():
+def readfile():     #read contents from file to text widget on start
     print('reading file')
     with open('notes.stk') as file:
         data = file.read()
@@ -26,7 +27,7 @@ def readfile():
 
 entry = tk.Text(window)
 entry.pack()
-entry.bind('<KeyPress>', writefile)
+entry.bind('<KeyPress>', writefile)     #binder handles keypress events; triggers writefile func
 
 
 readfile()
