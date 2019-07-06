@@ -26,7 +26,7 @@ def readfile():     #read contents from file to text widget on start
 
 
 entry = tk.Text(window)
-entry.pack()
+entry.pack(fill=tk.BOTH, expand=1)      # expand along with toplevel widget[parent window]
 entry.bind('<KeyPress>', writefile)     #binder handles keypress events; triggers writefile func
 
 
