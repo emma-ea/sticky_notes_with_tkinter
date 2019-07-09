@@ -9,4 +9,5 @@ Currently adding new features anytime possible.
 1. Script builds a window with an input field
 2. On keypress saves every keystroke to a file
 3. Done. Rerun script, loads notes from the file
+
 =======
